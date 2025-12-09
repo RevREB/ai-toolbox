@@ -1,0 +1,17 @@
+{
+  "name": "ai-toolbox-host",
+  "image": "ubuntu:22.04",
+  "packages": [
+    "docker",
+    "docker-compose"
+  ],
+  "shell": {
+    "init_hook": [
+      "# Suppress Powerlevel10k warnings during Devbox initialization",
+      "typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet",
+      "",
+      "# Call the launcher script",
+      "./start.sh"
+    ]
+  }
+}

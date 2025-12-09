@@ -1,0 +1,13 @@
+# ai-toolbox/docker-compose.yml
+version: '3.8'
+
+services:
+  ai-team:
+    build: .
+    container_name: ai-team-workstation
+    tty: true
+    stdin_open: true
+    ports:
+      - "8080:8080"
+    environment:
+      - TERM=xterm-256color
